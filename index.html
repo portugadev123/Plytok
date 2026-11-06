@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16a34a">
+  <meta name="description" content="Baixe vídeos do TikTok de forma simples com a PLYTOK.">
+  <title>PLYTOK — TikTok Video Downloader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="PLYTOK início"><span class="brand-mark">P</span><span>PLYTOK</span></a>
+    <nav aria-label="Navegação principal">
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <span class="eyebrow"><span class="dot"></span> Rápido, simples e gratuito</span>
+        <h1>Baixe vídeos do TikTok<br class="desktop-break"> sem complicação.</h1>
+        <p class="hero-subtitle">Salve seus vídeos favoritos em poucos segundos. Cole o link, processe e faça o download.</p>
+
+        <form class="download-form" id="downloadForm">
+          <div class="url-field">
+            <input id="videoUrl" type="url" placeholder="Cole o link do vídeo do TikTok aqui..." autocomplete="url" required>
+            <button type="button" class="paste-btn" id="pasteBtn">Colar link</button>
+          </div>
+          <button class="download-btn" id="downloadBtn" type="submit">
+            <span class="download-icon">↓</span><span id="buttonText">Baixar vídeo</span>
+          </button>
+        </form>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+        <p class="privacy-note"><span>✓</span> Não armazenamos os links enviados.</p>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <div class="floating-card card-one"><span class="mini-play">▶</span><span>Download rápido</span></div>
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-brand"><span class="brand-mark small">P</span> PLYTOK</div>
+            <div class="phone-play">▶</div>
+            <strong>Seu vídeo,<br>do seu jeito.</strong>
+            <div class="phone-input"></div>
+            <div class="phone-button">↓ &nbsp; Baixar vídeo</div>
+          </div>
+        </div>
+        <div class="floating-card card-two"><span class="check">✓</span><span>Fácil de usar</span></div>
+      </div>
+    </section>
+
+    <section class="benefits" id="como-funciona">
+      <div class="section-heading">
+        <span class="section-kicker">PLYTOK</span>
+        <h2>Por que escolher a PLYTOK?</h2>
+        <p>Tudo o que você precisa em uma experiência simples e direta.</p>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit">
+          <div class="benefit-icon">↯</div>
+          <h3>Downloads rápidos</h3>
+          <p>Uma experiência simples para processar seu link sem etapas desnecessárias.</p>
+        </article>
+        <article class="benefit">
+          <div class="benefit-icon">◇</div>
+          <h3>Sem complicação</h3>
+          <p>Cole o link do TikTok e siga as instruções para salvar o vídeo disponível.</p>
+        </article>
+        <article class="benefit">
+          <div class="benefit-icon">HD</div>
+          <h3>Qualidade disponível</h3>
+          <p>Baixe na melhor qualidade que a fonte e o serviço integrado disponibilizarem.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="how" id="sobre">
+      <div class="how-copy">
+        <span class="section-kicker">É muito fácil</span>
+        <h2>Três passos.<br><span>Pronto.</span></h2>
+      </div>
+      <ol class="steps">
+        <li><b>01</b><div><strong>Copie o link</strong><p>Abra o TikTok e copie o link do vídeo que deseja salvar.</p></div></li>
+        <li><b>02</b><div><strong>Cole na PLYTOK</strong><p>Insira o endereço no campo de download acima.</p></div></li>
+        <li><b>03</b><div><strong>Baixe seu vídeo</strong><p>Quando o processamento terminar, use o link disponibilizado.</p></div></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">P</span><span>PLYTOK</span></a>
+    <p>Uma maneira simples de salvar vídeos disponíveis publicamente.</p>
+    <small>© <span id="year"></span> PLYTOK. Respeite os direitos dos criadores e os termos da plataforma.</small>
+  </footer>
+  <script src="/js/app.js"></script>
+</body>
+</html>

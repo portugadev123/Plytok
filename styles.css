@@ -1,0 +1,98 @@
+:root {
+  --green: #16a34a;
+  --green-dark: #15803d;
+  --green-light: #dcfce7;
+  --ink: #111827;
+  --muted: #64748b;
+  --white: #fff;
+  --surface: #f8faf9;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Inter, Arial, sans-serif; color: var(--ink); background: var(--white); }
+a { color: inherit; text-decoration: none; }
+.topbar { height: 72px; display: flex; align-items: center; justify-content: space-between; padding: 0 max(6vw, 24px); background: #fff; }
+.brand { display: inline-flex; align-items: center; gap: 9px; font-weight: 800; letter-spacing: -.5px; font-size: 19px; }
+.brand-mark { width: 29px; height: 29px; display: inline-grid; place-items: center; color: white; background: var(--green); border-radius: 9px; font-size: 18px; font-weight: 800; }
+.topbar nav { display: flex; gap: 34px; color: #475569; font-size: 13px; font-weight: 600; }
+.topbar nav a:hover { color: var(--green-dark); }
+.menu-toggle { display: none; border: 0; background: none; font-size: 24px; }
+.hero { min-height: 510px; padding: 72px 7vw 64px; display: flex; align-items: center; justify-content: center; gap: 5vw; position: relative; overflow: hidden; color: white; background: linear-gradient(115deg, #16a34a 0%, #15803d 100%); }
+.hero:before, .hero:after { content: ""; position: absolute; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; pointer-events: none; }
+.hero:before { width: 520px; height: 520px; right: -130px; top: -270px; }
+.hero:after { width: 420px; height: 420px; left: -220px; bottom: -280px; }
+.hero-content { width: min(650px, 100%); text-align: center; z-index: 1; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 8px 13px; margin-bottom: 19px; border: 1px solid rgba(255,255,255,.25); border-radius: 30px; background: rgba(255,255,255,.10); font-size: 11px; font-weight: 600; }
+.dot { width: 7px; height: 7px; background: #bbf7d0; border-radius: 50%; }
+h1 { margin: 0; font-size: clamp(32px, 4.3vw, 53px); line-height: 1.08; letter-spacing: -2px; font-weight: 800; }
+.hero-subtitle { max-width: 500px; margin: 17px auto 28px; color: rgba(255,255,255,.88); font-size: 15px; line-height: 1.65; }
+.download-form { width: min(540px, 100%); margin: auto; display: grid; gap: 10px; }
+.url-field { height: 52px; display: flex; padding: 5px; background: white; border-radius: 30px; box-shadow: 0 8px 24px rgba(0,0,0,.12); }
+.url-field input { min-width: 0; flex: 1; border: 0; outline: 0; padding: 0 17px; border-radius: 25px; font: inherit; font-size: 12px; color: var(--ink); }
+.url-field input::placeholder { color: #94a3b8; }
+.paste-btn { border: 0; border-radius: 25px; padding: 0 19px; color: white; background: var(--green); font: inherit; font-size: 11px; font-weight: 700; cursor: pointer; }
+.download-btn { height: 48px; display: flex; align-items: center; justify-content: center; gap: 9px; border: 0; border-radius: 30px; background: white; color: var(--green-dark); font: inherit; font-size: 13px; font-weight: 800; cursor: pointer; box-shadow: 0 7px 20px rgba(0,0,0,.1); transition: transform .2s, background .2s; }
+.download-btn:hover { transform: translateY(-2px); background: #f0fdf4; }
+.download-btn:disabled { opacity: .7; cursor: wait; transform: none; }
+.download-icon { font-size: 20px; line-height: 1; }
+.status { min-height: 18px; margin: 11px 0 0; font-size: 12px; color: #fff; }
+.status.error { color: #fee2e2; }
+.status.success { color: #dcfce7; }
+.privacy-note { margin: 12px 0 0; color: rgba(255,255,255,.75); font-size: 10px; }
+.privacy-note span { font-weight: 800; margin-right: 4px; }
+.hero-decoration { width: 230px; height: 340px; position: relative; z-index: 1; flex: 0 0 230px; }
+.phone { position: absolute; width: 174px; height: 330px; right: 16px; top: 2px; border: 5px solid #1f2937; border-radius: 29px; padding: 8px; background: #111827; transform: rotate(5deg); box-shadow: 0 20px 35px rgba(0,0,0,.25); }
+.phone-notch { position: absolute; z-index: 2; top: 8px; left: 50%; transform: translateX(-50%); width: 60px; height: 13px; border-radius: 20px; background: #111827; }
+.phone-screen { height: 100%; border-radius: 19px; background: #fff; color: var(--ink); padding: 28px 10px 12px; text-align: center; overflow: hidden; }
+.phone-brand { display: flex; justify-content: center; align-items: center; gap: 5px; font-size: 10px; font-weight: 800; }
+.brand-mark.small { width: 17px; height: 17px; border-radius: 5px; font-size: 11px; }
+.phone-play { height: 105px; margin: 13px 0; display: grid; place-items: center; border-radius: 12px; color: white; font-size: 24px; background: linear-gradient(145deg, #22c55e, #166534); }
+.phone-screen strong { display: block; font-size: 17px; line-height: 1.2; }
+.phone-input { height: 24px; margin-top: 16px; border: 1px solid #e2e8f0; border-radius: 20px; }
+.phone-button { margin-top: 7px; padding: 8px 3px; border-radius: 20px; background: var(--green); color: white; font-size: 9px; font-weight: 700; }
+.floating-card { position: absolute; display: flex; align-items: center; gap: 8px; padding: 11px 13px; background: white; color: #334155; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,.16); font-size: 10px; font-weight: 700; white-space: nowrap; }
+.card-one { top: 56px; left: -28px; }
+.card-two { bottom: 40px; right: -8px; }
+.mini-play, .check { display: grid; place-items: center; width: 21px; height: 21px; border-radius: 7px; background: var(--green-light); color: var(--green-dark); }
+.benefits { padding: 76px 7vw 82px; background: white; }
+.section-heading { text-align: center; }
+.section-kicker { color: var(--green-dark); font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+h2 { margin: 10px 0; font-size: clamp(25px, 3vw, 34px); letter-spacing: -1.2px; }
+.section-heading p { margin: 0; color: var(--muted); font-size: 13px; }
+.benefit-grid { max-width: 950px; margin: 44px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 38px; }
+.benefit { text-align: center; }
+.benefit-icon { width: 44px; height: 44px; display: grid; place-items: center; margin: auto auto 15px; border-radius: 14px; color: var(--green-dark); background: var(--green-light); font-size: 19px; font-weight: 800; }
+.benefit h3 { margin: 0 0 9px; font-size: 14px; }
+.benefit p { max-width: 245px; margin: auto; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.how { padding: 70px 10vw; display: flex; align-items: center; justify-content: center; gap: 12vw; background: var(--surface); }
+.how-copy h2 { font-size: 40px; line-height: 1.1; }
+.how-copy h2 span { color: var(--green-dark); }
+.steps { width: min(460px, 100%); margin: 0; padding: 0; list-style: none; display: grid; gap: 22px; }
+.steps li { display: flex; gap: 17px; align-items: flex-start; }
+.steps li > b { color: var(--green-dark); font-size: 13px; }
+.steps strong { font-size: 13px; }
+.steps p { margin: 5px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+footer { padding: 38px 7vw; text-align: center; }
+.footer-brand { justify-content: center; }
+footer p { color: var(--muted); font-size: 12px; }
+footer small { display: block; margin-top: 23px; color: #94a3b8; font-size: 10px; }
+@media (max-width: 760px) {
+  .topbar { height: 64px; padding: 0 20px; }
+  .topbar nav { display: none; position: absolute; top: 64px; left: 0; right: 0; z-index: 5; padding: 18px 22px; background: white; box-shadow: 0 12px 20px rgba(0,0,0,.08); flex-direction: column; gap: 18px; }
+  .topbar nav.open { display: flex; }
+  .menu-toggle { display: block; color: var(--ink); }
+  .hero { min-height: auto; padding: 62px 22px 54px; }
+  .hero-decoration { display: none; }
+  .hero-content { max-width: 560px; }
+  h1 { font-size: clamp(31px, 8vw, 43px); letter-spacing: -1.5px; }
+  .hero-subtitle { font-size: 13px; }
+  .desktop-break { display: none; }
+  .url-field { height: 50px; }
+  .url-field input { font-size: 11px; padding-left: 12px; }
+  .paste-btn { padding: 0 13px; }
+  .benefits { padding: 57px 22px 62px; }
+  .benefit-grid { grid-template-columns: 1fr; gap: 30px; margin-top: 34px; }
+  .how { padding: 55px 25px; display: block; }
+  .how-copy { margin-bottom: 30px; }
+  .how-copy h2 { font-size: 34px; }
+}
